@@ -1,5 +1,0 @@
-- [Technical Writing Goals](user-writing-goals.md) — Aspires to write like Beej, Jacob Sorber, Nullprogram, Mitchell Hashimoto. Building Java RAG blog series to learn and teach simultaneously.
-- [Java RAG Project](project-java-rag.md) — Building production-grade RAG system across Java 8/17/21 as portfolio + blog series.
-- [Markdown Deliverables](feedback-markdown-deliverables.md) — Put substantive guides/plans/notes into `.md` files, not only chat.
-- [FDE Learning Goal](user-fde-learning-goal.md) — Coach from beginner level toward Forward Deployed Engineer: Java, Spring, Postgres, React, RAG.
-- [Linux Desktop Preference](user-linux-desktop-preference.md) — Prefers KDE/mac-like Linux workflow over GNOME, prioritizing fast reliable dev setup.
