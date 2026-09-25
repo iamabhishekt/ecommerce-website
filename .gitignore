@@ -1,0 +1,32 @@
+# Operating System Files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Dependencies & Node Modules
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.npm/
+
+# Logs & Temporary Files
+*.log
+**/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tmp
+*.bak
+
+# Claude Code local overrides and backups
+CLAUDE.local.md
+*.local.md
+.claude/backups/
+.claude/settings.local.json
+
+# Oversized binaries & install packages
+**/*.dmg
+**/*.pkg

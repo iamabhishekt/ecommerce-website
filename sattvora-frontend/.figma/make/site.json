@@ -1,0 +1,10 @@
+{
+  "description": "Enables distributors to manage product listings and pricing while offering end users a seamless, modern checkout experience with full cart control.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

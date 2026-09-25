@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+html, body, #root {
+  height: 100%;
+}
+
+@theme {
+  --color-brand-green: #1a5c2e;
+  --color-brand-green-light: #2d7a42;
+  --color-brand-green-pale: #e8f5ec;
+  --color-brand-gold: #b8922a;
+  --color-brand-gold-light: #d4a93c;
+  --color-brand-gold-pale: #fdf6e3;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #f8faf8;
+  color: #1a1a1a;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c5d5c8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1a5c2e; }
+
+.font-display { font-family: 'DM Serif Display', Georgia, serif; }
+.font-mono { font-family: 'DM Mono', monospace; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

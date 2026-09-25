@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-website",
+  "private": true,
+  "description": "Sattvora Enterprises Ecommerce Website & Claudify OS Workspace",
+  "scripts": {
+    "dev": "pnpm -C sattvora-frontend dev",
+    "build": "pnpm -C sattvora-frontend build",
+    "preview": "pnpm -C sattvora-frontend preview",
+    "typecheck": "pnpm -C sattvora-frontend exec tsc --noEmit"
+  }
+}
