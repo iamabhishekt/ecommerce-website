@@ -1,7 +1,8 @@
 {
-  "description": "Enables distributors to manage product listings and pricing while offering end users a seamless, modern checkout experience with full cart control.",
+  "title": "sattvora",
+  "description": "Sattvora - Premium authentic food products, spices, and groceries.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,

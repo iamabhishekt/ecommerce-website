@@ -30,6 +30,7 @@ CLAUDE.local.md
 # Oversized binaries & install packages
 **/*.dmg
 **/*.pkg
+*.zip
 
 # Universal Brain link
 brain
