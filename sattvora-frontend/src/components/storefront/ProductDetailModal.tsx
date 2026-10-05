@@ -89,48 +89,6 @@ export function ProductDetailModal({
               Ayurvedic Proprietary Medicine · {product.size}
             </p>
 
-            <div className="mt-4 p-4 bg-[#e8f5ec] rounded-xl">
-              <div className="text-sm font-semibold text-[#1a5c2e] mb-2">
-                Batch Information
-              </div>
-              <div className="grid grid-cols-2 gap-1 text-xs text-gray-600 font-mono">
-                <span className="text-gray-400">Batch No.</span>
-                <span>{product.batchNo}</span>
-                <span className="text-gray-400">Mfg. Date</span>
-                <span>{product.mfgDate}</span>
-                <span className="text-gray-400">Expiry</span>
-                <span>{product.expiry}</span>
-                <span className="text-gray-400">Lic. No.</span>
-                <span>{product.licNo}</span>
-              </div>
-            </div>
-
-            <div className="mt-4 p-4 bg-[#fdf6e3] rounded-xl border border-[#b8922a]/20">
-              <div className="flex items-baseline justify-between">
-                <div>
-                  <span className="text-xs text-gray-500">Selling Price</span>
-                  <div className="font-display text-2xl text-[#b8922a]">
-                    {fmt(product.sellingPrice)}
-                  </div>
-                </div>
-                {disc > 0 && (
-                  <div className="text-right">
-                    <span className="text-xs text-gray-400 line-through">
-                      MRP {fmt(product.mrp)}
-                    </span>
-                    <div className="text-sm font-bold text-[#1a5c2e]">
-                      Save {fmt(product.mrp - product.sellingPrice)}
-                    </div>
-                  </div>
-                )}
-              </div>
-              <p className="text-xs text-gray-400 mt-1">
-                Inclusive of all taxes (I.A.T.)
-              </p>
-              <p className="text-xs text-gray-400">
-                Dosage: As directed by the physician.
-              </p>
-            </div>
 
             <button
               onClick={handleAdd}

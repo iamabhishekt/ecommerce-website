@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Product } from "../../types"
-import { fmt, discount } from "../../utils/formatters"
 import { useCart } from "../../context/CartContext"
 
 interface ProductCardProps {
@@ -12,7 +11,6 @@ interface ProductCardProps {
 export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
   const [added, setAdded] = useState(false)
   const { addToCart } = useCart()
-  const disc = discount(product.mrp, product.sellingPrice)
 
   const handleAdd = () => {
     if (onAdd) {
@@ -20,6 +18,7 @@ export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
     } else {
       addToCart(product)
     }
+
     setAdded(true)
     setTimeout(() => setAdded(false), 1200)
   }
@@ -34,12 +33,6 @@ export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
         }}
         onClick={onView}
       >
-        {/* Discount badge */}
-        {disc > 0 && (
-          <div className="absolute top-3 left-3 bg-[#1a5c2e] text-white text-xs font-bold px-2 py-1 rounded-full">
-            {disc}% OFF
-          </div>
-        )}
         {product.featured && (
           <div className="absolute top-3 right-3">
             <span className="text-xs font-semibold px-2 py-1 rounded-full bg-[#b8922a] text-white">
@@ -47,6 +40,7 @@ export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
             </span>
           </div>
         )}
+
         <div className="text-center px-4">
           <div
             className="font-display text-3xl font-bold"
@@ -54,16 +48,22 @@ export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
           >
             {product.name}
           </div>
+
           <div className="text-sm font-semibold text-gray-700 tracking-widest mt-0.5">
             {product.subtitle}
           </div>
+
           <div
             className="text-lg mt-1"
-            style={{ color: product.accentColor, fontFamily: "serif" }}
+            style={{
+              color: product.accentColor,
+              fontFamily: "serif",
+            }}
           >
             {product.hindi}
           </div>
         </div>
+
         {/* View details overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-all duration-300 flex items-end justify-center pb-3 opacity-0 group-hover:opacity-100">
           <span className="text-xs bg-white/90 text-gray-700 px-3 py-1 rounded-full font-medium">
@@ -76,24 +76,18 @@ export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
         <p className="text-xs font-semibold text-[#1a5c2e] uppercase tracking-wide">
           {product.tagline}
         </p>
+
         <p className="text-xs text-gray-500 mt-1 leading-relaxed flex-1">
           {product.description.split(".")[0]}.
         </p>
 
         <div className="mt-3 flex items-end justify-between">
           <div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-display text-xl text-[#1a1a1a]">
-                {fmt(product.sellingPrice)}
-              </span>
-              {product.mrp !== product.sellingPrice && (
-                <span className="text-xs text-gray-400 line-through">
-                  {fmt(product.mrp)}
-                </span>
-              )}
+            <div className="text-xs text-gray-400">
+              {product.size}
             </div>
-            <div className="text-xs text-gray-400">{product.size}</div>
           </div>
+
           <div className="flex gap-2">
             <button
               onClick={onView}
@@ -101,6 +95,7 @@ export function ProductCard({ product, onAdd, onView }: ProductCardProps) {
             >
               Details
             </button>
+
             <button
               onClick={handleAdd}
               className="text-xs px-3 py-1.5 rounded-lg font-medium transition-all duration-200"
