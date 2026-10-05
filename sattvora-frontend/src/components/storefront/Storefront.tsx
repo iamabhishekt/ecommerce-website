@@ -209,12 +209,6 @@ export function Storefront({
                   <div className="ml-2 text-right">
                     <p className="text-sm font-bold text-[#b8922a] font-mono">
                       {fmt(p.sellingPrice)}
-                    {/* </p>
-                    {p.mrp !== p.sellingPrice && (
-                      <p className="text-xs text-[#1a5c2e] font-medium">
-                        {discount(p.mrp, p.sellingPrice)}% off
-                      </p> 
-                    )}  */}
                   </div>
                 </div>
               ))}
